@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+	background-color: #fafbe7;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    user-select: none;
+    overflow: hidden;
+    color: #000000;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: #4E4F54;
+    padding: 1rem 0rem;
+	width: 100%;
+    height: 8vh;
+}
+a{
+    color: #ffffff;
+}
+.logo{
+    font-size: 1.5rem;
+    margin-left: 3rem;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.nav-list li{
+    letter-spacing: 1px;
+    margin-left: 2rem;
+}
+.login, .user{
+    display: flex;
+    justify-content: center;
+    width: 12vw;
+    height: 8vh;
+    border-bottom: 8vh solid #B0B0B0;
+    border-left: 2vw solid transparent;
+    margin-left: 3rem;
+}
+.login a{
+	color: #000000;
+	font-size: 1rem;
+    margin-top: .8rem;
+    height: 6vh;
+}
+.user img{
+    margin-top: .4rem;
+    height: 6vh;
+}
+
+
+main {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem; 
+	padding: .1rem;
+}
+.texto{
+	grid-column: 1;
+}
+.titulo {
+	font-family: "Poppins", sans-serif;
+    font-weight: 600;
+	font-size: 3.1rem;
+	margin: 2rem 0rem 1rem 1rem;
+}
+.texto1 {
+    grid-column: 1;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 1.8rem;
+	margin: 2rem 0rem 8rem 1rem;
+}
+.text-log {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 1.5rem;
+	color: #c6c6c6;
+	margin: 2rem 0rem 1rem 1rem;
+}
+img {
+	grid-column: 2;
+    max-width: 100%;
+    height: auto;
+	margin-top: 10rem;
+}
+span{
+	color: #ffc000;
+}
+
+.log-img{
+	height: 30vh;
+	margin: 6rem 1rem 4rem 1rem;
+}
+.log-txt {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 30px;
+	color: #1E1D1D;
+}
+@media screen and (min-width: 1200px) {
+    .nav-list li {
+        margin-left: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+	main{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
+
+    .texto1{
+        margin: 2rem 0 0 1rem;
+    }
+
+    .text-log {
+        font-size: 1.3rem;
+    }
+
+    img {
+        margin-top: 1rem;
+    }
+
+	nav {
+        flex-direction: column;
+        height: auto;
+    }
+    .logo {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .nav-list {
+        justify-content: center;
+    }
+    .nav-list li {
+        margin: 0 1rem;
+    }
+	.login,
+    .user {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+	main{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .texto1{
+        font-size: 1rem;
+        margin: 2rem 0 0 1rem;
+    }
+
+    .text-log {
+        font-size: 1rem;
+    }
+
+    img {
+        margin-top: 1rem;
+    }
+
+	nav {
+		padding: .5rem;
+        flex-direction: column;
+        height: auto;
+    }
+    .logo {
+		font-size: 1rem;
+        margin-left: 0;
+        margin-bottom: .5rem;
+        text-align: center;
+    }
+    .nav-list {
+        justify-content: center;
+    }
+    .nav-list li {
+        margin: 0 1rem;
+    }
+	.login,
+    .user {
+        display: none;
+    }
+}
+
+	

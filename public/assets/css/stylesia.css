@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+	background-color: #fe7171;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    user-select: none;
+    overflow: hidden;
+    color: #000000;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: #4E4F54;
+    padding: 1rem 0rem;
+	width: 100%;
+    height: 8vh;
+}
+a{
+    color: #ffffff;
+}
+.logo{
+    font-size: 1.5rem;
+    margin-left: 3rem;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.nav-list li{
+    letter-spacing: 1px;
+    margin-left: 2rem;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    width: 12vw;
+    height: 8vh;
+    border-bottom: 8vh solid #B0B0B0;
+    border-left: 2vw solid transparent;
+    margin-left: 3rem;
+}
+.login a{
+	color: #000000;
+	font-size: 1rem;
+    margin-top: .8rem;
+    height: 6vh;
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+img{
+	height: 30vh;
+	margin: 6rem 1rem 4rem 1rem;
+}
+h1 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 30px;
+	color: #1E1D1D;
+}
+
+@media screen and (min-width: 1200px) {
+
+    .nav-list li {
+        margin-left: 3rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+    .logo {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .nav-list {
+        justify-content: center;
+    }
+    .nav-list li {
+        margin: 0 1rem;
+    }
+	.login,
+    .user {
+        display: none;
+    }
+    img {
+        height: 20vh;
+        margin: 4rem 1rem 2rem 1rem;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    nav {
+		padding: .5rem;
+        flex-direction: column;
+        height: auto;
+    }
+    .logo {
+		font-size: 1rem;
+        margin-left: 0;
+        margin-bottom: .5rem;
+        text-align: center;
+    }
+    .nav-list {
+        justify-content: center;
+    }
+    .nav-list li {
+        margin: 0 1rem;
+    }
+	.login,
+    .user {
+        display: none;
+    }
+    img {
+        height: 16vh;
+        margin: 3rem 1rem 1rem 1rem;
+    }
+    h1 {
+        font-size: 18px;
+    }
+}
+

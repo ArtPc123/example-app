@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+	background-color: #F3CF60;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    user-select: none;
+    overflow: hidden;
+    color: #000000;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: #4E4F54;
+    padding: 1rem 0rem;
+	width: 100%;
+    height: 8vh;
+}
+a{
+    color: #ffffff;
+}
+.logo{
+    font-size: 1.5rem;
+    margin-left: 3rem;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.nav-list li{
+    letter-spacing: 1px;
+    margin-left: 2rem;
+}
+.login, .user{
+    display: flex;
+    justify-content: center;
+    width: 12vw;
+    height: 8vh;
+    border-bottom: 8vh solid #B0B0B0;
+    border-left: 2vw solid transparent;
+    margin-left: 3rem;
+}
+.login a{
+	color: #000000;
+	font-size: 1rem;
+    margin-top: .8rem;
+    height: 6vh;
+}
+.user img{
+    margin-top: .4rem;
+    height: 6vh;
+}
+
+
+
+
+
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.titulo{
+	margin-top: 2rem;
+}
+
+.caixas{
+	width: 100%;
+}
+
+.caixas button{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 95vw;
+	height: 8vh;
+	padding: 0rem 1rem;
+	margin: 2rem 1rem 1rem 2rem;
+	background-color: #d9d9d9;
+	font-family: "Poppins", sans-serif;
+    font-weight: 600;
+	font-size: 18px;
+	border-radius: 5px;
+}
+
+.caixas p{
+	display: none;
+	width: 95vw;
+	padding: 0rem 1rem;
+	margin: 0rem 1rem 1rem 2rem;
+	font-family: "Poppins", sans-serif;
+    font-weight: 600;
+	font-size: 16px;
+	border-radius: 5px;
+	background-color: #f1f1f1;
+
+}
+@media screen and (min-width: 1200px) {
+
+    .nav-list li {
+        margin-left: 3rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+    .logo {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .nav-list {
+        justify-content: center;
+    }
+    .nav-list li {
+        margin: 0 1rem;
+    }
+	.login,
+    .user {
+        display: none;
+    }
+
+    main {
+        padding: 1rem;
+    }
+    .titulo {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    .caixas button, .caixas p {
+        width: 90vw;
+        margin: 1rem;
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    nav {
+		padding: .5rem;
+        flex-direction: column;
+        height: auto;
+    }
+    .logo {
+		font-size: 1rem;
+        margin-left: 0;
+        margin-bottom: .5rem;
+        text-align: center;
+    }
+    .nav-list {
+        justify-content: center;
+    }
+    .nav-list li {
+        margin: 0 1rem;
+    }
+	.login,
+    .user {
+        display: none;
+    }
+
+
+    main {
+        padding: 0rem;
+    }
+    .titulo {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+    .caixas button{
+        width: 90vw;
+		height: 5vh;
+        margin: 1rem;
+        font-size: 10px;
+    }
+	.caixas p {
+        width: 90vw;
+		height: auto;
+        padding: .3rem;
+        font-size: 8px;
+    }
+}
+
+
+

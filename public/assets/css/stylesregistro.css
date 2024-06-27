@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+	background-color: #fafbe7;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    user-select: none;
+    overflow: hidden;
+    color: #000000;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: #4E4F54;
+    padding: 1rem 0rem;
+	width: 100%;
+    height: 8vh;
+}
+a{
+    color: #ffffff;
+}
+.logo{
+    font-size: 1.5rem;
+    margin-left: 3rem;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.nav-list li{
+    letter-spacing: 1px;
+    margin-left: 2rem;
+}
+.login, .user{
+    display: flex;
+    justify-content: center;
+    width: 12vw;
+    height: 8vh;
+    border-bottom: 8vh solid #B0B0B0;
+    border-left: 2vw solid transparent;
+    margin-left: 3rem;
+}
+.login a{
+	color: #000000;
+	font-size: 1rem;
+    margin-top: .8rem;
+    height: 6vh;
+}
+.user img{
+    margin-top: .4rem;
+    height: 6vh;
+}
+
+main{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+main img{
+	width: 50vw;
+	height: 100%;
+}
+
+.container{
+	width: 100%;
+	max-width: 50rem;
+	height: 100%;
+	font-weight: 500;
+	padding: 1rem 2rem;
+}
+
+.container .texto{
+	font-size: 12px;
+	padding-bottom: 1rem;
+}
+
+.container form{
+	font-size: 14px;
+}
+
+
+.container form input{
+	width: 100%;
+	height: 6vh;
+	border-radius: 5px;
+	border-style: groove;
+	border-width: 1px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 10px;
+	font-weight: 600;
+	padding: .5rem;
+    margin-bottom: .2rem;
+}
+
+.container form #lembrar{
+	width: 5%;
+	height: auto;
+}
+.container form .senha{
+	padding-bottom: 1.5rem;
+}
+.container form .lembrar{
+	width: 100%;
+	padding-bottom: .8rem;
+}
+main button{
+	width: 100%;
+	height: 5vh;
+	border-radius: 5px;
+	background-color: #ffc000;
+	color: white;
+	border-style: hidden;
+	font-family: 'Poppins', sans-serif;
+	font-size: 10px;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+main .conta{
+	font-size: 14px;
+}
+main .conta a{
+	font-size: 14px;
+	color: #0C2A92;
+}
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
+	.container form #lembrar{
+		width: auto;
+		height: auto;
+	}
+    .nav-list li {
+        margin-left: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+	main{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+    .container {
+		width: 100vw;
+        padding: 1rem 1rem;
+    }
+
+	main img{
+		display: none;
+	}
+
+	nav {
+        flex-direction: column;
+        height: auto;
+    }
+    .logo {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .nav-list {
+        justify-content: center;
+    }
+    .nav-list li {
+        margin: 0 1rem;
+    }
+	.login,
+    .user {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+	main{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+    .container {
+		width: 100vw;
+        padding: 2rem 1rem;
+    }
+
+	main img{
+		width: 100%;
+		height: 20vh;
+	}
+
+	nav {
+		padding: .5rem;
+        flex-direction: column;
+        height: auto;
+    }
+    .logo {
+		font-size: 1rem;
+        margin-left: 0;
+        margin-bottom: .5rem;
+        text-align: center;
+    }
+    .nav-list {
+        justify-content: center;
+    }
+    .nav-list li {
+        margin: 0 1rem;
+    }
+	.login,
+    .user {
+        display: none;
+    }
+}
