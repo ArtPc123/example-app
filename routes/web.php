@@ -19,4 +19,6 @@ Route::get('/', function () {
 
 use resources\views;
 
-Route::get('/ajuda', [views::class, 'ajuda']);
+Route::get('/cargos', function () {
+    return view('administrativo.cargos.listar');
+});
