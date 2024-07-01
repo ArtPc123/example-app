@@ -19,6 +19,4 @@ Route::get('/', function () {
 
 use resources\views;
 
-Route::get('/ajuda', function () {
-    return view('ajuda.php');
-});
+Route::get('/ajuda', [views::class, 'ajuda']);
