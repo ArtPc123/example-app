@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+use resources\views;
+
 Route::get('/ajuda', function () {
-    return view('ajuda');
+    return view('ajuda.php');
 });
