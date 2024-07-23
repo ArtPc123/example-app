@@ -1,38 +1,55 @@
-<!DOCTYPE html>
-<html lang=pt-br>
-<head>
-	<meta charset='UTF-8'>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Início</title>
-	<link rel='Stylesheet' href='assets/css/styles.css'>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-</head>		
-<body>
-	<header>
-		<nav>
-			<a class="logo" href="#">InvenTech</a>
-			<ul class="nav-list">
-				<li><a href="index.html">Inicio</a></li>
-				<li><a href="sobre.html">Sobre</a></li>
-				<li><a href="ia.html">IA</a></li>
-				<li><a href="ajuda.html">Ajuda</a></li>
-				<div class="login"><a href="login.html">Login</a></div>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<div class="texto">
-			<h1 class='titulo'><span>Warehouse</span> Managing</h1>
-			<h2 class="texto1">Sua empresa organizada, muito mais <span>fácil</span><br>e <span>rápido</span> do que antes.</h2>
-			<h3 class="text-log">Você pode logar se foi cadastrado como<br>operador pelo dono da empresa.</h3>
-		</div>
-		<img src='assets/images/image1.png' alt='Draw'>
-	</main>
-					
-			
-</body>
-</html>
-	
+<?php
+
+use Illuminate\Contracts\Http\Kernel;
+use Illuminate\Http\Request;
+
+define('LARAVEL_START', microtime(true));
+
+/*
+|--------------------------------------------------------------------------
+| Check If The Application Is Under Maintenance
+|--------------------------------------------------------------------------
+|
+| If the application is in maintenance / demo mode via the "down" command
+| we will load this file so that any pre-rendered content can be shown
+| instead of starting the framework, which could cause an exception.
+|
+*/
+
+if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
+    require $maintenance;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader for
+| this application. We just need to utilize it! We'll simply require it
+| into the script here so we don't need to manually load our classes.
+|
+*/
+
+require __DIR__.'/../vendor/autoload.php';
+
+/*
+|--------------------------------------------------------------------------
+| Run The Application
+|--------------------------------------------------------------------------
+|
+| Once we have the application, we can handle the incoming request using
+| the application's HTTP kernel. Then, we will send the response back
+| to this client's browser, allowing them to enjoy our application.
+|
+*/
+
+$app = require_once __DIR__.'/../bootstrap/app.php';
+
+$kernel = $app->make(Kernel::class);
+
+$response = $kernel->handle(
+    $request = Request::capture()
+)->send();
+
+$kernel->terminate($request, $response);
