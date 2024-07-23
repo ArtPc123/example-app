@@ -17,7 +17,6 @@ Route::get('/', function () {
     return view('website.home');
 });
 
-<<<<<<< HEAD
 Route::get('/ajuda', function () {
     return view('website.ajuda');
 });
@@ -55,10 +54,7 @@ Route::prefix('/administrativo')->group(function () {
     Route::post('/salvar', 'App\Http\Controllers\Administrativo\ClientesController@salvar');
 });
 
-=======
-use resources\views;
 
 Route::get('/cargos', function () {
     return view('administrativo.cargos.listar');
 });
->>>>>>> d3203fe2a294dcb41bdc9ce4884f369dadf851fd
