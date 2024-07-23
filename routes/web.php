@@ -54,7 +54,3 @@ Route::prefix('/administrativo')->group(function () {
     Route::post('/salvar', 'App\Http\Controllers\Administrativo\ClientesController@salvar');
 });
 
-
-Route::get('/cargos', function () {
-    return view('administrativo.cargos.listar');
-});
