@@ -14,11 +14,51 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('website.home');
 });
 
+<<<<<<< HEAD
+Route::get('/ajuda', function () {
+    return view('website.ajuda');
+});
+
+Route::get('/login', function () {
+    return view('website.login');
+});
+
+Route::get('/registro', function () {
+    return view('website.registro');
+});
+
+Route::get('/sobre', function () {
+    return view('website.sobre');
+});
+
+Route::get('/ia', function () {
+    return view('website.ia');
+});
+
+
+Route::get('/administrativo/clientes', function () {
+    return view('clientes.lista');
+});
+Route::get('/administrativo/clientes/cadastro', function () {
+    return view('clientes.cadastro');
+});
+
+
+Route::prefix('/administrativo')->group(function () {
+    Route::get('/', 'App\Http\Controllers\Administrativo\ClientesController@lista');
+    Route::get('/cadastro', 'App\Http\Controllers\Administrativo\ClientesController@cadastro');
+    Route::get('/cadastro/{id}', 'App\Http\Controllers\Administrativo\ClientesController@cadastro');
+    Route::get('/remover/{id}', 'App\Http\Controllers\Administrativo\ClientesController@remover');
+    Route::post('/salvar', 'App\Http\Controllers\Administrativo\ClientesController@salvar');
+});
+
+=======
 use resources\views;
 
 Route::get('/cargos', function () {
     return view('administrativo.cargos.listar');
 });
+>>>>>>> d3203fe2a294dcb41bdc9ce4884f369dadf851fd
